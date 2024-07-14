@@ -13,7 +13,7 @@ import gleam_community/colour
 import lustre/element
 
 // prints:
-// <i class="fa-rotate-by fa-2xl fa-solid fa-building" style="--fa-rotate-angle:20deg; color:75507B;"></i>
+// <i class="fa-rotate-by fa-2xl fa-solid fa-building" style="--fa-rotate-angle:20deg; color:#75507B;"></i>
 pub fn main() {
   fa.building()
   |> fa.set_variant_solid()

@@ -35,7 +35,7 @@ pub fn set_variant_thin(attrs: List(Attribute(a))) -> List(Attribute(a)) {
 }
 
 pub fn set_color(attrs: List(Attribute(a)), color: Color) -> List(Attribute(a)) {
-  [style([#("color", colour.to_rgb_hex_string(color))]), ..attrs]
+  [style([#("color", colour.to_css_rgba_string(color))]), ..attrs]
 }
 
 //
@@ -47,7 +47,7 @@ pub fn set_primary_color(
   attrs: List(Attribute(a)),
   color: Color,
 ) -> List(Attribute(a)) {
-  [style([#("--fa-primary-color", colour.to_rgb_hex_string(color))]), ..attrs]
+  [style([#("--fa-primary-color", colour.to_css_rgba_string(color))]), ..attrs]
 }
 
 /// Set secondary color of duotone variant
@@ -55,7 +55,10 @@ pub fn set_secondary_color(
   attrs: List(Attribute(a)),
   color: Color,
 ) -> List(Attribute(a)) {
-  [style([#("--fa-secondary-color", colour.to_rgb_hex_string(color))]), ..attrs]
+  [
+    style([#("--fa-secondary-color", colour.to_css_rgba_string(color))]),
+    ..attrs
+  ]
 }
 
 //
